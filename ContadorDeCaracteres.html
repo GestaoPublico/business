@@ -1,0 +1,32 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/xhtml1-strict.dtd">
+<html>
+<head> 
+            </head>
+<body><!-- Observação -->
+					  <script type="text/javascript" language="javascript">
+
+						function mostrarResultado(box,num_max,campospan){
+							var contagem_carac = box.length;
+							if (contagem_carac != 0){
+								document.getElementById(campospan).innerHTML = contagem_carac + " caracteres digitados";
+								if (contagem_carac == 1){
+									document.getElementById(campospan).innerHTML = contagem_carac + " caracter digitado";
+								}
+
+							}else{
+								document.getElementById(campospan).innerHTML = "Observação, quantidade máxima é de 100 caracteres.";
+							}
+						}
+
+						</script>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="website">Observação<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <textarea maxlength="100" onkeyup="mostrarResultado(this.value,140,'spcontando');contarCaracteres(this.value,140,'sprestante')"  id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                            data-parsley-validation-threshold="10"></textarea>
+							<span id="spcontando">Quantidade máxima é de 100 caracteres!</span><br />
+					   </div>
+                      </div>
+                      </body>
+</html>
